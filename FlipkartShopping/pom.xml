@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>SeleniumAutomation</groupId>
+  <artifactId>SeleniumAutomation</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>My Awesome Application</name>
+
+ <parent>
+    <groupId>org.actframework</groupId>
+    <artifactId>act-starter-parent</artifactId>
+    <version>1.9.1.0</version>
+  </parent>
+
+  <properties>
+    <app.entry>SeleniumAutomation.AppEntry</app.entry>
+
+    <!-- tune your JVM arguments here
+    <vmargs.heap.init>256M</vmargs.heap.init>
+    <vmargs.heap.max>2G</vmargs.heap.max>
+    <vmargs.extended />
+    -->
+
+    <!-- Add docker deployment support
+    Note it require you have already logged into your docker hub
+    account to deploy your docker images.
+    <docker.repo>org.actframework/archetype-quickstart</docker.repo>
+    <docker.profile>prod</docker.profile>
+    <docker.group>default</docker.group>
+    <docker.http.port>5460</docker.http.port>
+    <docker.cli.port>5461</docker.cli.port>
+    -->
+
+    <!-- uncomment to add lombok support
+    <act.lombok>/path/to/lombok.jar</act.lombok>
+    -->
+  </properties>
+
+  <dependencies>
+   <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.141.59</version>
+</dependency>
+  </dependencies>
+
+  <build>
+  	<pluginManagement>
+  		<plugins>
+  			<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+  			<plugin>
+  				<groupId>org.eclipse.m2e</groupId>
+  				<artifactId>lifecycle-mapping</artifactId>
+  				<version>1.0.0</version>
+  				<configuration>
+  					<lifecycleMappingMetadata>
+  						<pluginExecutions>
+  							<pluginExecution>
+  								<pluginExecutionFilter>
+  									<groupId>
+  										org.codehaus.mojo
+  									</groupId>
+  									<artifactId>
+  										buildnumber-maven-plugin
+  									</artifactId>
+  									<versionRange>
+  										[1.4,)
+  									</versionRange>
+  									<goals>
+  										<goal>create-timestamp</goal>
+  									</goals>
+  								</pluginExecutionFilter>
+  								<action>
+  									<ignore></ignore>
+  								</action>
+  							</pluginExecution>
+  						</pluginExecutions>
+  					</lifecycleMappingMetadata>
+  				</configuration>
+  			</plugin>
+  		</plugins>
+  	</pluginManagement>
+  </build>
+</project>
